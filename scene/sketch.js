@@ -1,3 +1,11 @@
+// Project Title
+// Your Name
+// Date
+//
+// Extra for Experts:
+// - describe what you did to take this project "above and beyond"
+
+
 rainbow = prompt("what is your favorite color of the rainbow");
 // figure out in class prompt ("Nice Choice, now check this out")
 
@@ -37,3 +45,4 @@ function drawGradient() {
     height / 2 + 200
   );
 }
+
