@@ -17,32 +17,72 @@ function setup() {
 function draw() {
   background(220);
 
+  
+
   drawGradient();
 
-  greenGradient();
+  colorGradient();
 
   drawingContext.fillStyle = gradient;
   rect(width / 2, height / 2, 400, 400, 50);
 }
 
-function greenGradient() {
-  gradient.addColorStop(0, color(255, 192, 203));
-  gradient.addColorStop(1, color(150, 100, 100));
-}
-
-function favColor() {
-  if (rainbow === "green") {
-    greenGradient();
+function colorGradient() {
+  function greenGradient() {
+    gradient.addColorStop(0, color(255, 192, 203));
+    gradient.addColorStop(1, color(150, 100, 100));
   }
+  
+  function redGradient () {
+    gradient.addColorStop(0, color(255, 0, 0));
+    gradient.addColorStop(1, color(200, 100, 100));
+  }
+  
+  function yellowGradient() {
+    gradient.addColorStop(0, color(255, 255, 0));
+    gradient.addColorStop(1, color(150, 150, 150));
+  }
+  
+  function indigoGradient() {
+    gradient.addColorStop(0, color(128, 0, 128));
+    gradient.addColorStop(1, color(255, 192, 203));
+  }
+  
+  function orangeGradient() {
+    gradient.addColorStop(0, color(255, 165, 0));
+    gradient.addColorStop(1, color(255, 0, 0));
+  }
+  
+  function blueGradient() {
+    gradient.addColorStop(0, color(0, 0, 255));
+    gradient.addColorStop(1, color(48, 213, 200));
+  }
+  
+  function violetGradient() {
+    gradient.addColorStop(0, color(143, 0, 255));
+    gradient.addColorStop(1, color(150, 150, 150));
+  }
+  
+  function favColor() {
+    if (rainbow === "green") {
+      greenGradient();
+    if (rainbow === "blue"){
+      blueGradient();
+    }
+    }
+  }
+    rect(width/2, height/2, 400, 400, 50)
+  }
+  
+  function drawGradient() {
+    gradient = drawingContext.createLinearGradient(
+      width / 2 - 200,
+      height / 2 - 200,
+      width / 2 + 200,
+  
+      height / 2 + 200
+    );
+  }
+  
+
 }
-
-function drawGradient() {
-  gradient = drawingContext.createLinearGradient(
-    width / 2 - 200,
-    height / 2 - 200,
-    width / 2 + 200,
-
-    height / 2 + 200
-  );
-}
-
