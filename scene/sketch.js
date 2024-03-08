@@ -6,6 +6,7 @@ state = "start screen";
 function setup() {
   createCanvas(800, 800);
   colorMode(RGB);
+  
 }
 
 function draw() {
@@ -13,23 +14,38 @@ function draw() {
 
   drawGradient();
 
+  if (mouseIsPressed === true) {
+    state = "color";
+  }
+
   startScreen();
 
+  if (state === "color") {
+    rainbow = prompt("what is your favourite color of the rainbow?")
+    rainbowGradient();
+  }
+  
+
   drawingContext.fillStyle = gradient;
-  rect(width / 2, height / 2, 400, 400, 50);
+  rect(width / 2, height / 2, 200, 200, 50);
 }
 
-startScreen();
+
+
+
+
 
 function startScreen() {
   if (state === "start screen") {
-    background(0)
+    background(0);
     fill("blue");
     textSize(42);
     textAlign(CENTER, CENTER);
     text("Click the mouse to start!", width / 2, height / 2);
   }
 }
+
+
 
 function greenGradient() {
   if (rainbow === "green") {
@@ -91,7 +107,7 @@ function drawGradient() {
 }
 
 function rainbowGradient() {
-  rainbow = prompt("what is your favorite color of the rainbow");
+  
   greenGradient();
   redGradient();
   yellowGradient();
