@@ -1,12 +1,9 @@
-
-
-
-state = "start screen";
+let state = "start screen";
+let rainbow;
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   colorMode(RGB);
-  
 }
 
 function draw() {
@@ -19,33 +16,41 @@ function draw() {
   }
 
   startScreen();
+  endScreen();
 
   if (state === "color") {
-    rainbow = prompt("what is your favourite color of the rainbow?")
+    rainbow = prompt(
+      "what is your favourite color of the rainbow?  If you would like to end, please type end"
+    );
     rainbowGradient();
   }
-  
+  if (state === "end") {
+    background(0);
+    fill("blue");
+    textSize(42);
+    textAlign(CENTER, CENTER);
+    text("Thanks for Playing!", width / 2, height / 2);
+  }
 
   drawingContext.fillStyle = gradient;
   rect(width / 2, height / 2, 200, 200, 50);
 }
 
-
-
-
-
-
 function startScreen() {
   if (state === "start screen") {
     background(0);
     fill("blue");
-    textSize(42);
+    textSize(35);
     textAlign(CENTER, CENTER);
-    text("Click the mouse to start!", width / 2, height / 2);
+    text(
+      "Click the mouse to start, type end to finish!",
+      width / 2,
+      height / 2
+    );
   }
 }
 
-
+function endScreen() {}
 
 function greenGradient() {
   if (rainbow === "green") {
@@ -107,7 +112,6 @@ function drawGradient() {
 }
 
 function rainbowGradient() {
-  
   greenGradient();
   redGradient();
   yellowGradient();
@@ -115,4 +119,8 @@ function rainbowGradient() {
   indigoGradient();
   violetGradient();
   orangeGradient();
+}
+
+function endScreen() {
+  if (rainbow === "end") state = "end";
 }
