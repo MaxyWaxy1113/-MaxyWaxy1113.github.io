@@ -122,5 +122,6 @@ function rainbowGradient() {
 }
 
 function endScreen() {
-  if (rainbow === "end") state = "end";
+  if (rainbow === "end"){
+    state = "end";
 }
