@@ -125,3 +125,4 @@ function endScreen() {
   if (rainbow === "end"){
     state = "end";
 }
+}
