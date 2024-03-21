@@ -5,10 +5,12 @@
 - [Collision Demo](collision)
 - [Arrays and Objects](circles)
 - [Generative Art](art)
+- [Terrain Generation](terrain)
 
 
 
 ## Projects
 - [interactive scene](scene)
+- [Object notation and arrays scene](arrays and object notation scene)
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
