@@ -6,6 +6,7 @@
 - [Arrays and Objects](circles)
 - [Generative Art](art)
 - [Terrain Generation](terrain)
+- [Bubble Movement](bubble)
 
 
 
