@@ -44,5 +44,8 @@ function boundaryDetect() {
   if (x > width || x < 0) {
     background(0);
   }
+  if (y > height || y < 0) {
+    background(0);
+  }
 }
 
