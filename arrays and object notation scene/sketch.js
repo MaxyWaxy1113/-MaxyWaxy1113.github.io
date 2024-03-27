@@ -8,12 +8,16 @@
 let x;
 let y;
 let dx = 10;
-let dy = 10;
+let dy = 15;
+let Obstacles = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  x = width/2
-  y = height - 30
+  x = width/2;
+  y = height - 30;
+
+  window.setInterval(repeat, 500);
+ 
 }
 
 function draw() {
@@ -22,7 +26,11 @@ function draw() {
   rect(x, y, 30, 30);
   Movement();
   boundaryDetect();
+  showObject();
+  moveObstacles();  
 }
+  
+
    
 
 function Movement() {
@@ -48,4 +56,40 @@ function boundaryDetect() {
     background(0);
   }
 }
+
+function spawnObject() {
+  let someObject = {
+    x: random(width),
+    y: 0,
+    color: "black",
+    width: random (10, 30), 
+    height: random (10, 30),
+  };
+    
+   
+  Obstacles.push(someObject);
+}
+
+function showObject() {
+  for (let object of Obstacles) {
+    fill("black");
+    rect (object.x, object.y, object.width, object.height);
+  } 
+}
+    
+function moveObstacles() {
+  for (let object of Obstacles) {
+    object.y = object.y += dy;
+  }
+}
+
+function repeat() {
+  for (let i = 0; i < 7; i++){
+    spawnObject();
+  }
+}
+    
+   
+    
+    
 

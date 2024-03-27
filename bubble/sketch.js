@@ -12,7 +12,7 @@ function setup() {
     spawnBubble();
   }
 
-  window.setInterval(spawnBubble, 500)
+  window.setInterval(spawnBubble, 500);
 }
 
 function draw() {
