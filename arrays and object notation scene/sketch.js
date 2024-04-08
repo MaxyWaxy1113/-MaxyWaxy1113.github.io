@@ -10,6 +10,8 @@ let y;
 let dx = 10;
 let dy = 15;
 let Obstacles = [];
+let hit;
+let state;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -28,6 +30,8 @@ function draw() {
   boundaryDetect();
   showObject();
   moveObstacles();  
+  Collide();
+  End();
 }
   
 
@@ -88,7 +92,26 @@ function repeat() {
     spawnObject();
   }
 }
+
+function Collide(){
+  for ( let object of Obstacles){
+    let hit = collideRectRect(object.x, object.y, object.width, object.height, x, y, 30, 30);
+    if (hit === true){
+      state = "over";
+    }
+  
+  }
+}
     
+function End() {
+  if (state === "over") {
+    background(0);
+    fill("blue");
+    textSize(35);
+    textAlign(CENTER, CENTER);
+    text("Game Over, press your mouse to play again!", width / 2, height / 2);
+  }
+}
    
     
     
