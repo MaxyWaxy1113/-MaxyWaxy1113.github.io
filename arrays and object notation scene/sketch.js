@@ -11,7 +11,7 @@ let dx = 10;
 let dy = 15;
 let Obstacles = [];
 let hit;
-let state = "begin"
+let state = "begin";
 
 
 function setup() {

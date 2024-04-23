@@ -20,18 +20,21 @@ function draw() {
   textSize(32);
   textAlign(CENTER, CENTER);
   fill(0);
-  text('Score: ' + score, width / 2, height + 50);
+  text("Score: " + score, width / 2, height + 50);
 }
  
 
 function keyPressed() {
   if (keyIsDown(LEFT_ARROW)) {
     moveLeft();
-  } else if (keyIsDown(RIGHT_ARROW)) {
+  }
+  else if (keyIsDown(RIGHT_ARROW)) {
     moveRight();
-  } else if (keyIsDown(UP_ARROW)) {
+  }
+  else if (keyIsDown(UP_ARROW)) {
     moveUp();
-  } else if (keyIsDown(DOWN_ARROW)) {
+  }
+  else if (keyIsDown(DOWN_ARROW)) {
     moveDown();
   }
 }
@@ -80,7 +83,8 @@ function updateSlidingTiles() {
     if (abs(currentX - targetX) < 1 && abs(currentY - targetY) < 1) {
       slidingTiles.splice(i, 1);
       grid[x][y] = tile.value;
-    } else {
+    }
+    else {
       tile.startX = currentX;
       tile.startY = currentY;
     }
@@ -89,32 +93,32 @@ function updateSlidingTiles() {
 
 function getColor(val) {
   switch (val) {
-    case 0:
-      return 200;
-    case 2:
-      return '#eee4da';
-    case 4:
-      return '#ede0c8';
-    case 8:
-      return '#f2b179';
-    case 16:
-      return '#f59563';
-    case 32:
-      return '#f67c5f';
-    case 64:
-      return '#f65e3b';
-    case 128:
-      return '#edcf72';
-    case 256:
-      return '#edcc61';
-    case 512:
-      return '#edc850';
-    case 1024:
-      return '#edc53f';
-    case 2048:
-      return '#edc22e';
-    default:
-      return '#ff0000';
+  case 0:
+    return 200;
+  case 2:
+    return "#eee4da";
+  case 4:
+    return "#ede0c8";
+  case 8:
+    return "#f2b179";
+  case 16:
+    return "#f59563";
+  case 32:
+    return "#f67c5f";
+  case 64:
+    return "#f65e3b";
+  case 128:
+    return "#edcf72";
+  case 256:
+    return "#edcc61";
+  case 512:
+    return "#edc850";
+  case 1024:
+    return "#edc53f";
+  case 2048:
+    return "#edc22e";
+  default:
+    return "#ff0000";
   }
 }
 
