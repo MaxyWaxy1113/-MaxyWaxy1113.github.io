@@ -16,5 +16,6 @@
 ## Projects
 - [interactive scene](scene)
 - [Object notation and arrays scene](arrays and object notation scene)
+- [2D Grid scene](2048)
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
