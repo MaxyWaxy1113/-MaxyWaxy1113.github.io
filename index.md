@@ -16,6 +16,10 @@
 ## Projects
 - [interactive scene](scene)
 - [Object notation and arrays scene](arrays and object notation scene)
+<<<<<<< HEAD
 - [2D Grid scene](memory)
+=======
+- [2D Grid scene](batman2dGrid)
+>>>>>>> 66d686cf4e83d9d2ea748763634323c99c8bb7a2
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

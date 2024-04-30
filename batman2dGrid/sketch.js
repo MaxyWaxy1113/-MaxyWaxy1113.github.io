@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-// 2D Grid
-// Dan Schellenberg
-// Apr 9, 2024
-
-let gameGrid = createGrid(10);
-
-function setup() {
-
-
-  createCanvas(windowWidth, windowWidth);
-  
-
-}
-
-function draw() {
-  background(220);
-  displayGrid(gameGrid, 50);
-  
-}
-
-function createGrid (size) {
-  let newGrid = [];
-  for (let i = 0; i < size; i++) {
-    newGrid[i] = [];
-    for (let j = 0; j < size; j++) {
-      if (random(100) > 50) {
-        newGrid[i][j] = 1;
-      }
-      else {
-        newGrid[i][j] = 0;
-      }
-
-    }
-  }
-  
-
-  return newGrid;
-}
-
-function displayGrid (grid, squareSize) {
-  for (let i = 0; i < grid.length; i++) {
-    for (let j = 0; j < grid[i].length; j++) {
-      if (grid[i][j] === 1) {
-        fill(0);
-        rect(i*squareSize, j*squareSize, squareSize, squareSize);
-      }
-      else {
-        fill(255)
-        rect(i*squareSize, j*squareSize, squareSize, squareSize);
-      }
-=======
 // Max Liu
 // 2d Grid Assignment
 // Comp Sci 30
@@ -88,13 +36,10 @@ function myArray() { // base 2darray that creates a grid, the platform that the 
       stroke (0)
       fill(colors[i][j])
       rect(x, y, cellSize ,cellSize);
->>>>>>> 66d686cf4e83d9d2ea748763634323c99c8bb7a2
     }
   }
 }
 
-<<<<<<< HEAD
-=======
 function colorChange() { // overarching function that draws the Bat logo
   for (let i = 0; i < cols; i++){ // I will be completely honest, I feel like this for loop is unnessacary but it was one of the first things I added when I started this assignment, and for some reason everything breaks if I get rid of it. Go Coder Max!
     for (let j = 0; j < rows; j++) {  
@@ -388,7 +333,7 @@ function startScreen() { // introductory screen
     fill("blue");
     textSize(35);
     text ("Press spacebar to reveal", 1000, 450)
-    text("the hero that Gotham needs", 1000, 500);
+    text("the hero that Gotham needs,", 1000, 500);
     text("but not the one it deserves...", 1000, 550)
   }
 }
@@ -414,5 +359,5 @@ function keyPressed() { // switches state to "start" once the spacebar is keyPre
    
     
   
->>>>>>> 66d686cf4e83d9d2ea748763634323c99c8bb7a2
+
 
