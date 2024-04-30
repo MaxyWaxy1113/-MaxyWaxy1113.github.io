@@ -333,7 +333,7 @@ function startScreen() { // introductory screen
     fill("blue");
     textSize(35);
     text ("Press spacebar to reveal", 1000, 450)
-    text("the hero that Gotham needs", 1000, 500);
+    text("the hero that Gotham needs,", 1000, 500);
     text("but not the one it deserves...", 1000, 550)
   }
 }
