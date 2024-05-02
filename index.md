@@ -10,6 +10,8 @@
 - [2d Grid Demo](2dGrid)
 - [Game Of Life](LifeGame)
 - [Charachter in grid](CharInGrid)
+- [OOP DEMO](walker)
+- [Fireworks](fireworks)
 
 
 
